@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+
+.hero {
+  width: 100%;
+  height: 600px;
+  background: url(/static/img/bg.png);
+  background-size: cover;
+}
+
+.homeimg {
+  width: 500px;
+  height: 520px;
+  position: relative;
+  left: 40rem;
+  bottom: 36rem;
+}
+
+.content {
+  position: absolute;
+  top: 35%;
+  left: 6%;
+  height: 500px;
+}
+
+.content .title {
+  color: #0a0a0a;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: inline-block;
+  margin-bottom: 20px;
+  background: linear-gradient(120deg,
+      #1c99fe 20.69%,
+      #7644ff 50.19%,
+      #fd4766 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content h1 {
+  color: #1f1f25;
+  font-size: 75px;
+  font-weight: 900;
+  line-height: 90px;
+  text-transform: inherit;
+  width: 70%;
+  font-family: 'Aclonica', sans-serif;
+
+}
+
+.content h1 span {
+  color: #fd4766;
+  font-family: 'Aclonica', sans-serif;
+}
+
+.content p {
+  width: 55%;
+  color: #1a1919;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  font-family: 'Comic Neue', cursive;
+  font-size: 22.6px;
+  font-weight: 200;
+
+}
+
+.mission {
+  display: flex;
+  width: 100%;
+  height: 570px;
+  background: url(/static/img/bg.png);
+  /* background: transparent; */
+  background-size: cover;
+
+}
+
+.mission-div1 {
+
+  width: 50%;
+  float: left;
+}
+
+.missionimg {
+  padding-left: -30px;
+  padding-top: 60px;
+  width: 95%;
+  height: 100%;
+}
+
+.mission-div2 {
+  padding-top: 140px;
+  width: 50%;
+  float: left;
+}
+
+.mission-heading {
+  text-align: left;
+  padding-top: 28px;
+  font-size: 3.45rem;
+  font-family: 'Aclonica', sans-serif;
+
+}
+
+.mission-para {
+  padding-left: 0;
+  padding-right: 23px;
+  text-align: left;
+  font-size: 22.4px;
+  font-family: 'Comic Neue', cursive;
+  font-weight: lighter
+}
+
+.abc {
+  background: url(/static/img/bg.png);
+  background-size: cover;
+}
+
+.map-container {
+  display: flex;
+  height: 500px;
+
+}
+
+.map-header {
+  width: 40%;
+  float: left;
+}
+
+.map-header-text {
+  height: 30%;
+  width: 100%;
+  padding-top: 30px;
+}
+
+/* 
+.map-header-final-text {
+} */
+
+.map-header-img {
+  height: 70%;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.map {
+  width: 50%;
+  float: left;
+}
+
+.map-actual {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.mission-container2 {
+  width: 490px;
+  height: 450px;
+  background-color: transparent;
+  position: relative;
+  right: -10rem;
+  bottom: 25rem;
+}
+
+.map {
+  position: relative;
+  left: 45rem;
+  width: 700px;
+  height: 450px;
+  top: 3.5rem;
+  border-radius: 6px;
+}
+
+.naviagte {
+  width: 100px;
+  height: 100px;
+  padding-left: 2rem;
+}
+
+.quote {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#last-div {
+  width: 60%;
+  float: left;
+}
+
+#final-map {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}

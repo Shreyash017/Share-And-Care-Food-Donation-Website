@@ -1,0 +1,152 @@
+.leader-main {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 180px;
+}
+
+.medal-heading {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.medals {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.silver {
+    width: 30%;
+    float: left;
+    margin-left: 30px;
+}
+
+.silver1 {
+    width: 100%;
+    height: 75%;
+    padding-top: 60px;
+}
+
+.silver1 img {
+    position: relative;
+    width: 80%;
+    height: 100;
+}
+
+.silver2 {
+    width: 100%;
+    height: 25%;
+    padding-top: 75px;
+}
+
+.silver2 h1 {
+    color: rgba(192, 192, 192, 0.758);
+}
+
+
+.gold {
+    width: 30%;
+    float: left;
+    margin-left: 30px;
+}
+
+.gold1 {
+    width: 100%;
+    height: 75%;
+}
+
+.gold1 img {
+    position: relative;
+    width: 80%;
+    height: 100;
+}
+
+.gold2 {
+    width: 100%;
+    height: 25%;
+    padding-top: 10px;
+}
+
+.gold2 h1 {
+    color: goldenrod;
+}
+
+
+.bronze {
+    width: 30%;
+    float: left;
+    margin-left: 30px;
+}
+
+.bronze1 {
+    width: 100%;
+    height: 75%;
+    padding-top: 100px;
+}
+
+.bronze1 img {
+    position: relative;
+    width: 60%;
+    height: 100;
+}
+
+.bronze2 {
+    width: 100%;
+    height: 25%;
+    padding-top: 130px;
+}
+
+.bronze2 h1 {
+    color: chocolate;
+}
+
+
+/* ---------------------------- */
+
+.container h2 {
+    margin-bottom: -30px;
+    color: #fd4766
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-top: -30px;
+    margin-bottom: 46px;
+    width: 900px;
+}
+
+.content-table thead tr {
+    background-color: #fd4766;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #fd4766;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #fd4766;
+
+}

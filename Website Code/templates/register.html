@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block page-content %}
+
+<section class="main">
+    <div class="login-box">
+        <div class="login-header">
+            <a href="#">
+                <img src="/static/img/logo.png" class="logo1" alt="Logo" />
+            </a>
+        </div>
+
+        <div class="form-content">
+            <form method="post" class="form-inputs">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col">
+                        <label for="firstname">First Name</label>
+                        <input type="text" name="fname" class="form-control" id="firstname" placeholder="First name"
+                            required>
+                    </div>
+                    <div class="col">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" name="lname" class="form-control" id="lastname" placeholder="Last name"
+                            required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" class="form-control" id="email" placeholder="Email-ID" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Password"
+                            required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-last col">
+                        <button type="submit" id="last-btn" class="form-button btn btn-success submit-btn">Sign
+                            up</button>
+                    </div>
+                </div>
+            </form>
+            <img src="/static/img/register1.png" alt="Signu-Img">
+        </div>
+    </div>
+</section>
+
+{% endblock %}

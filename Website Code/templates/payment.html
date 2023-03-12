@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block page-content %}
+
+<section class="main">
+    <div class="container">
+        <form method="post" action="#">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Details</h3>
+                    <div class="inputBox">
+                        <label for="name">Full name :</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="email">Email :</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="address">Address :</label>
+                        <input type="text" id="address" placeholder="Enter your address">
+                    </div>
+                    <div class="inputBox">
+                        <label for="city">City :</label>
+                        <input type="text" id="city" placeholder="Enter your city">
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <label for="state">State :</label>
+                            <input type="text" id="state" placeholder="State">
+                        </div>
+                        <div class="inputBox">
+                            <label for="zip">Zip code :</label>
+                            <input type="text" id="zip" placeholder="Zip code">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h3 class="title">payment</h3>
+                    <div class="inputBox">
+                        <span>Cards accepted :</span>
+                        <img src="/static/img/card_img.png" alt="Cards">
+                    </div>
+                    <div class="inputBox">
+                        <label for="noc">Name on card :</label>
+                        <input type="text" name="noc" id="noc" placeholder="Name" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="ccn">Credit card number :</label>
+                        <input type="number" name="ccn" id="ccn" placeholder="###-###-###" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="amt">Amount :</label>
+                        <input type="number" name="amt" id="amt" placeholder="Amount" required>
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <label for="exp_year">Exp year :</label>
+                            <input type="number" name="exp_year" id="exp_year" placeholder="YYYY" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="cvv">CVV :</label>
+                            <input type="text" name="cvv" id="cvv" placeholder="---" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" id="btn" class="submit-btn" onclick="alert('Thank You!')">Pay Now</button>
+
+        </form>
+    </div>
+</section>
+
+{% endblock %}

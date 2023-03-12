@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block page-content %}
+
+{% if messages %}
+<section>
+    {% for message in messages %}
+    <div class="alert-success alert-dismissible fade show" role="alert">
+        <h1>
+            <center><strong>{{ message }}</strong></center>
+        </h1>
+    </div>
+    {% endfor %}
+</section>
+<br>
+{% endif %}
+
+<section class="main">
+    <br><br>
+    <div class="container">
+        <h2>Our Services</h2>
+        <section class="services">
+            <center>
+                <p class="quote"><i> “Alone we can do so little, together we can do so much.”</i><b> — Helen Keller</b>
+                </p><br>
+            </center>
+            <br>
+            <a id="donorLink" href="{% url 'donor' %}">
+                <div class="card">
+                    <div class="content">
+                        <div class="title">Donor</div>
+                        <img id="donorImage" src="/static/img/Donor.png" alt="Donor">
+                    </div>
+                </div>
+            </a>
+            <a id="receiverLink" href="{% url 'receiver' %}">
+                <div class="card">
+                    <div class="content">
+                        <div class="title">Receiver</div>
+                        <img id="receiverImage" src="/static/img/Receiver.png" alt="Receiver">
+                    </div>
+                </div>
+            </a>
+        </section>
+    </div>
+</section>
+
+{% endblock %}

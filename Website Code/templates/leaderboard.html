@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block page-content %}
+
+<section class="leader-main">
+    <div class="medal-heading">
+        <center>
+            <h1>Top Contributers</h1>
+        </center>
+    </div>
+    <section class="medals">
+        <div class="silver">
+            <div class="silver1">
+                <center>
+                    <img src="/static/img/Silver.png" alt="Silver-Medal">
+                </center>
+            </div>
+            <div class="silver2">
+                <center>
+                    <h1>{{ sname }}</h1>
+                    <h4>{{ scity }}</h4>
+                </center>
+            </div>
+        </div>
+        <div class="gold">
+            <div class="gold1">
+                <center>
+                    <img src="/static/img/Gold.png" alt="Gold-Medal">
+                </center>
+            </div>
+            <div class="gold2">
+                <center>
+                    <h1>{{ fname }}</h1>
+                    <h4>{{ fcity }}</h4>
+                </center>
+            </div>
+        </div>
+        <div class="brnoze">
+            <div class="bronze1">
+                <center>
+                    <img src="/static/img/Bronze.png" alt="bronze-Medal">
+                </center>
+            </div>
+            <div class="bronze2">
+                <center>
+                    <h1>{{ tname }}</h1>
+                    <h4>{{ tcity }}</h4>
+                </center>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+<section>
+    <div class="container">
+        <h2>
+            <center> Leaderboard </center>
+        </h2>
+        <section class="services">
+            <center>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    {% for i in content %}
+                    {% if forloop.counter|divisibleby:2 %}
+                    <tr class="active-row">
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ i.0 }}</td>
+                        <td>{{ i.2 }}</td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ i.0 }}</td>
+                        <td>{{ i.2 }}</td>
+                    </tr>
+                    {% endif %}
+                    <br>
+                    {% endfor %}
+                </table>
+            </center>
+        </section>
+    </div>
+</section>
+
+
+{% endblock %}

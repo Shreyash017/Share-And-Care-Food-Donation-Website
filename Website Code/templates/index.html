@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block page-content %}
+
+<section class="hero">
+  <div class="content">
+    <span class="title">Lend a hand, give a can.</span>
+    <h1>Welcome to <span>Share & Care!</span></h1>
+    <p>
+      We are a team, keen of providing healthy meals to those who sleep empty-belly each night as well as avoiding
+      food wastage by accumulating leftover meals from people who generally used to throw away extra food and ensuring
+      it reaches those who need it.
+    </p>
+    <img src="/static/img/homepageimg.png" class="homeimg" alt="Pic1" />
+  </div>
+</section>
+
+<section>
+  <div class="mission">
+    <div class="mission-div1">
+      <img class="missionimg" src="/static/img/mission.png" alt="mission">
+    </div>
+    <div class="mission-div2">
+      <h2 class="mission-heading">Our Mission</h2>
+      <br>
+      <p class="mission-para">
+        The mission of Share & Care is to bring parity in the life of needy, making sure that every individual lives a
+        happy life by feeding them and ensuring no one sleeps empty stomach. There is no greater joy nor greater
+        reward than to make a fundamental difference in someone's life.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="abc">
+  <div class="map-container">
+    <div class="map-header">
+      <div class="map-header-text">
+        <center>
+          <h2 class="map-header-final-text">Navigate your <br>nearest NGO</h2>
+        </center>
+      </div>
+      <div class="map-header-img">
+        <center>
+          <img src="/static/img/navigate2.png" alt="navigate">
+        </center>
+      </div>
+    </div>
+    <div id="last-div">
+      <iframe title="map_api" id="final-map"
+        src="https://my.atlistmaps.com/map/ea3d97d8-d328-4645-b1ef-fb36f5c967e2?share=true" allow="geolocation"
+        frameborder="0" scrolling="yes" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

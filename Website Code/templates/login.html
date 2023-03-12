@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block page-content %}
+
+<section class="main">
+  <div class="outercontainer">
+    <div class="innercontainer">
+      <div class="leftboximg" id="leftbox">
+        <h1 class="imgdesc">Welcome to our
+          community</h1>
+        <img class="Foodbox" src="/static/img/Food_box.png" alt="">
+        <img class="spoon" src="/static/img/spoon.png" alt="">
+        <img class="phone" src="/static/img/phone.png" alt="">
+        <img class="takeaway" src="/static/img/takeaway.png" alt="">
+        <img class="triangle" src="/static/img/triangle.png" alt="">
+        <img class="hexagon" src="/static/img/hexagon.png" alt="">
+      </div>
+      <div class="rightboxlogin" id="rightbox">
+        <form method="post" class="loginform">
+          {% csrf_token %}
+          <div class="logo_icon">
+            <a href="#">
+              <img src="/static/img/logo.png" class="logo_page" alt="Logo" />
+            </a>
+            <h2>Share & Care</h2>
+          </div>
+          <div class="secondheading">
+            <h1>Welcome Back!</h1>
+            <p>Not registererd? <a href="{% url 'register' %}">Sign in</a></p>
+          </div>
+          <div class="logininputs">
+            <div class="inputs">
+              <img class="user" src="/static/img/user.png" alt="">
+              <label class="inp1" for="email">Email</label>
+              <input type="email" name="email" class="user-input" id="email" required>
+            </div>
+            <div class="inputs">
+              <img class="padlock" src="/static/img/padlock.png" alt="">
+              <label class="inp2" for="password">Password</label>
+              <input type="password" name="password" class="user-password" id="password" required>
+            </div>
+            <button type="submit" class="Login">Login</button>
+          </div>
+          <p class="quote">"No act of kindness, no matter how small, is ever wasted."</p>
+        </form>
+      </div>
+
+      {% if messages %}
+      {% for message in messages %}
+      {% if customCSS %}
+      <div class="alert {{ customCSS }} alert-dismissible fade show" role="alert">
+      {% else %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      {% endif %}
+          <strong>{{ message }}</strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          </form>
+        </div>
+        {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

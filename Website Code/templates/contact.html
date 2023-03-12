@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block page-content %}
+
+<section class="main">
+    <div class="contact-box">
+        <div class="contact-header">
+            <a href="#">
+                <img class="logo1" src="/static/img/logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="form-content">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <label for="firstname">First Name</label>
+                        <input type="text" name="fname" class="form-control" id="firstname" placeholder="First name"
+                            required>
+                    </div>
+                    <div class="col">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" name="lname" class="form-control" id="lastname" placeholder="Last name"
+                            required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="email"> Email Id: </label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Email Id"
+                            required>
+                    </div>
+                    <div class="col">
+                        <label for="contact"> Contact No:</label>
+                        <input type="text" name="phone" class="form-control" id="contact" placeholder="Contact No"
+                            required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label> Are you an existing client? </label> <br>
+                        <input type="radio" id="yes" name="choice" value="yes" required>
+                        <label class="radio-btn" for="yes"> Yes </label>
+                        <input type="radio" id="no" name="choice" value="no" required>
+                        <label for="no"> No </label>
+                    </div>
+                </div>
+
+                <br>
+                <div class="form-row textarea">
+                    <div class="input-data">
+                        <label for="msg"> Your Message: </label> <br>
+                        <textarea id="msg" name="msg" cols="80" rows="5" placeholder="Enter Your Message"
+                            required></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-last col">
+                        <button type="submit" id="btn" class="btn"
+                            onclick="alert('Thank You! We will reach out to you soon.')">
+                            Send
+                            Message </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% block page-content %}
+
+<section class="main">
+    <div class="contact-box">
+        <div class="contact-header">
+            <a href="#">
+                <img class="logo1" src="/static/img/logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="form-content">
+            <div class="form-content">
+                <form method="post" action="#">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col">
+                            <label for="name"> Name:</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="email"> Email:</label>
+                            <input type="text" name="email" class="form-control" id="email" placeholder="Email id"
+                                required>
+                        </div>
+                        <div class="col">
+                            <label for="contact"> Contact:</label>
+                            <input type="number" name="contact" class="form-control" id="contact"
+                                placeholder="Contact No" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label> Choose your preference: </label> <br>
+                            <input type="radio" id="veg" name="choice" value="veg" required>
+                            <label class="radio-btn" for="veg"> Veg </label>
+                            <input type="radio" id="nonveg" name="choice" value="nonveg" required>
+                            <label for="nonveg"> Non-Veg </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label> Which type of food are you donating? </label> <br>
+                            <input type="radio" id="packed" name="type" value="packed" required>
+                            <label class="radio-btn" for="packed"> Packed </label>
+                            <input type="radio" id="cooked" name="type" value="cooked" required>
+                            <label for="cooked"> Cooked </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="freshness"> Till how many days can the food be consumed? </label> <br>
+                            <input type="number" name="expire" class="form-control" id="freshness"
+                                placeholder="Expiry date of food item" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row textarea row">
+                        <div class="input-data col">
+                            <label for="quantity"> For how many people is the quantity of food sufficient? </label> <br>
+                            <input type="number" name="quantity" class="form-control" id="quantity"
+                                placeholder="Quantity sufficient for how many people" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="address"> Address:</label>
+                            <input type="text" name="address" class="form-control" id="address"
+                                placeholder="Enter your address" required>
+                        </div>
+                        <div class="col">
+                            <label for="city"> City:</label>
+                            <input type="text" name="city" class="form-control" id="city" placeholder="Enter your city"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="state"> State:</label>
+                            <input type="text" name="state" class="form-control" id="state" placeholder="State"
+                                required>
+                        </div>
+                        <div class="col">
+                            <label for="zipcode"> Zip Code:</label>
+                            <input type="text" name="zipcode" class="form-control" id="zipcode" placeholder="Zip Code"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label> Are you willing to make the donation anonymously? </label> <br>
+                            <input type="radio" id="yes1" name="privacy" value="yes" required>
+                            <label class="radio-btn" for="yes1"> Yes </label>
+                            <input type="radio" id="no1" name="privacy" value="no" required>
+                            <label for="no1"> No </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label> Are you willing to donate in future as well? </label> <br>
+                            <input type="radio" id="yes2" name="future" value="yes" required>
+                            <label class="radio-btn" for="yes2"> Yes </label>
+                            <input type="radio" id="no2" name="future" value="no" required>
+                            <label for="no2"> No </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-last col">
+                            <button type="submit" id="btn" class="btn" onclick="alert('Thank You for the Donation!')">
+                                Donate
+                                Now
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
